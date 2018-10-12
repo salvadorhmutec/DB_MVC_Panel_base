@@ -6,6 +6,7 @@
 package controllers;
 import models.ModelDetalleContacto;
 import views.ViewDetalleContacto;
+import models.ModelAgenda;
 
 /**
  *
@@ -14,6 +15,7 @@ import views.ViewDetalleContacto;
 public class ControllerDetalleContacto {
     public ModelDetalleContacto modelDetalleContacto;
     public ViewDetalleContacto viewDetalleContacto;
+    public ModelAgenda modelAgenda;
 
     /**
      * Controllador ControllerDetalleContacto que une el modelDetalleContacto y
@@ -34,5 +36,6 @@ public class ControllerDetalleContacto {
     public final void initView(){
         viewDetalleContacto.jl_nombre.setText(modelDetalleContacto.getNombre());
         viewDetalleContacto.jl_email.setText(modelDetalleContacto.getEmail());
+        viewDetalleContacto.jl_telefono.setText(modelDetalleContacto.getTelefono());
     }
 }
